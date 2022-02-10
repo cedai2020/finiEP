@@ -1,0 +1,65 @@
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid style="padding: 0; align-items:center;">
+      <ion-row>
+        <ion-col size="12" class="verde ion-text-center" style="height: auto;">
+          <div class="textoVerdeRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+        <ion-col size="12" class="gris ion-text-center" style="height: auto;">
+          <img src="../assets/menu/uaeh-blanco.png" style="max-height: 15px;">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="false" fixed="true" class="fondo-contenido">
+  <div id="container" slot="fixed">
+    <ion-grid fixed="true">
+      <ion-row style="padding-left:20%; padding-right:20%;">
+        <ion-col>
+          <img src="../assets/menu/Logo-FINI.png" style="max-width: 80%;">
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%">
+        <ion-col>
+          <img src="../assets/menu/Programa-General.png" (click)="goToPrograma()" style="max-width: 80%;">
+          <br><p>PROGRAMA</p>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/menu/Concurso2.png" (click)="goToConcurso()" style="max-width: 80%;">
+          <br><p>CONCURSO</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%">
+        <ion-col>
+          <img src="../assets/menu/Pais-invitado.png" (click)="goToPais()" style="max-width: 80%;">
+          <br><p>PAÍS INVITADO</p>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/menu/Invitados.png" (click)="goToArtistas()" style="max-width: 80%;">
+          <br><p>ARTISTAS INVITADOS</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%">
+        <ion-col>
+          <img src="../assets/menu/nosotros.png" (click)="goToNosotros()" style="max-width: 80%;">
+          <br><p>NOSOTROS</p>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/menu/buscar.png" (click)="goToBuscar()" style="max-width: 80%;">
+          <br><p>BUSCAR</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>
+
+

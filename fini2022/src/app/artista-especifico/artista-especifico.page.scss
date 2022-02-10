@@ -1,0 +1,26 @@
+.icono-redes{
+    max-width: 50px;
+    margin-right: 5%;
+}
+
+.imagenArtista{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.noPadding{
+    padding: 0px;
+}
+
+ion-toolbar{
+    --border-width: 0px;
+    --padding-start: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+
+    max-height: 30%;
+    width: 100%;
+    height: 30%;
+}

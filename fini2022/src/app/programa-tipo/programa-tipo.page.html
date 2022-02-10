@@ -1,0 +1,65 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid style="padding: 0; align-items:center;">
+      <ion-row>
+        <ion-col size="12" class="verde ion-text-center" style="height: auto;">
+          <div class="textoVerdeRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+        <ion-col size="12" class="gris ion-text-center" style="height: auto;">
+          <div class="textoBlancoRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo-contenido">
+  <div id="container" slot="fixed">
+    <ion-grid fixed="true">
+      <ion-row style="padding-left:10%; padding-right:10%">
+        <ion-col>
+          <img src="../assets/programa/tipos/General.png" (click)="goToProgramaDias('GENERAL')" style="max-width:65%;">
+          <BR><P>GENERAL</P>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/programa/tipos/Coloquio.png" (click)="goToProgramaDias('COLOQUIO')" style="max-width: 65%;">
+          <BR><P>BACH ICON</P>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%" class="ion-row-espace">
+        <ion-col>
+          <img src="../assets/programa/tipos/Conferencias.png" (click)="goToProgramaDias('CONFERENCIAS')" style="max-width: 65%;">
+          <BR><P>CONFERENCIAS</P>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/programa/tipos/Exposiciones.png" (click)="goToProgramaDias('EXPOSICIONES')" style="max-width: 65%;">
+          <BR><P>EXPOSICIONES</P>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%" class="ion-row-espace">
+        <ion-col>
+          <img src="../assets/programa/tipos/Talleres.png" (click)="goToProgramaDias('TALLERES')" style="max-width: 65%;">
+          <BR><P>TALLERES</P>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/programa/tipos/Editorial.png" (click)="goToProgramaDias('CONCIERTOS')" style="max-width: 65%;">
+          <BR><P>PRESENTACIONES EDITORIALES</P>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%" class="ion-row-espace">
+        <ion-col>
+          <img src="../assets/programa/tipos/Proyecciones.png" (click)="goToProgramaDias('TALLERES')" style="max-width: 65%;">
+          <BR><P>PROYECCIONES</P>
+        </ion-col>
+        <ion-col>
+          <img src="../assets/programa/tipos/Conciertos.png" (click)="goToProgramaDias('CONCIERTOS')" style="max-width: 65%;">
+          <BR><P>CONCIERTOS</P>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,83 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid style="padding: 0; align-items:center;">
+      <ion-row>
+        <ion-col size="12" class="verde ion-text-center" style="height: auto;">
+          <div class="textoVerdeRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+        <ion-col size="12" class="gris ion-text-center" style="height: auto;">
+          <div class="textoBlancoRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<div style="background-color: white;">
+  <ion-searchbar placeholder="Buscar" animated (ionChange)="verificar_texto()" [(ngModel)]="inputValue"></ion-searchbar>
+  <hr style="height: 1px; width: 80%; background-color: #ECECEC;">
+</div>
+
+<ion-content class="fondo-contenido">
+
+  <!-- <div class="ion-text-center" style="padding-top: 15%;" *ngIf="divdataprograma==null && divdata==null && divdataartistas==null && divdataconcurso==null">
+    <p class="textoNegroRegular">Ingresa el valor a buscar</p> 
+  </div> -->
+  <div *ngIf="divdata">
+
+    <div *ngIf="divdataprograma">
+      <ion-list>
+        <ion-list-header>
+          Programaaa
+        </ion-list-header>
+  
+        <ion-item *ngFor="let programa of programas;" style="padding-left: 5%;">
+          <ion-label>
+            <p class="textoNegroBold padding-item">{{ programa.nombre_evento }}</p>
+            <p class="textoNegroRegular padding-item">{{ programa.fecha }}</p>
+            <p class="textoNegroBold padding-item">{{ programa.hora }}</p>
+            <p *ngIf="programa.enlace_transmision != '-'" class="textoNegroRegular ion-text-left" style="padding-bottom: 3%;" (click)='goToTransmision(programa, programa.enlace_transmision)'>Ver la transmisión</p>
+          </ion-label>
+        </ion-item>
+  
+      </ion-list>
+    </div>
+
+
+    <div *ngIf="divdataconcurso">
+      <ion-list>
+        <ion-list-header>
+          Concursantes
+        </ion-list-header>
+  
+        <ion-item *ngFor="let concurso of concursos;" style="padding-left: 5%;" (click)="goToConcursante(concurso)">
+          <ion-label style="margin-bottom: 5%; margin-top: 5%;">
+            <p class="textoNegroBold padding-item-concurso">{{ concurso.nombreConcursante }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+
+    <div *ngIf="divdataartistas">
+      <ion-list>
+        <ion-list-header>
+          Artistas Invitados
+        </ion-list-header>
+        <ion-item *ngFor="let artista of artistas;">
+          <ion-avatar slot="start">
+            <img src="{{this.url}}{{this.artista.nombre_foto}}">
+          </ion-avatar>
+          <ion-label style="padding-left: 5%;" (click)="goToArtistaEspecifico(artista)">
+            <ion-label style="margin-bottom: 5%; margin-top: 5%;">
+              <p class="textoNegroBold padding-item-concurso">{{ artista.nombre }}</p>
+            </ion-label>
+          </ion-label>
+        </ion-item>
+        
+      </ion-list>
+    </div>
+
+  </div>
+
+</ion-content>

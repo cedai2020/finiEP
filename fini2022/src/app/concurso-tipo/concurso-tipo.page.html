@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid style="padding: 0; align-items:center;">
+      <ion-row>
+        <ion-col size="12" class="verde ion-text-center" style="height: auto;">
+          <div class="textoVerdeRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+        <ion-col size="12" class="gris ion-text-center" style="height: auto;">
+          <div class="textoBlancoRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo-contenido">
+  <div id="container" slot="fixed">
+    <ion-grid fixed="true">
+      <ion-row style="padding-left:10%; padding-right:10%">
+        <ion-col>
+          <img src="../assets/concurso/menu/Profesionales.png" (click)="goToConcursoEspecifico('FOTOGRAFÍA')" style="max-width: 80%;">
+          <br><p>PROFESIONAL</p>
+        </ion-col>
+
+        <ion-col>
+          <img src="../assets/concurso/menu/Estudiantes.png" (click)="goToConcursoEspecifico('TéCNICAS ALTERNATIVAS')" style="max-width: 80%;">
+          <br><p>ESTUDIANTE</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-left:10%; padding-right:10%; padding-top: 20%;" class="ion-row-espace">
+        <ion-col>
+          <img src="../assets/concurso/menu/jovenes.png" (click)="goToConcursoEspecifico('VIDEO DOCUMENTAL')" style="max-width: 80%;">
+          <br><p>FINI JÓVENES</p>
+        </ion-col>
+        
+        <ion-col>
+          <!--<img src="../assets/concurso/menu/cartel.png" (click)="goToConcursoEspecifico('CARTEL')" style="max-width: 80%;">-->
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>

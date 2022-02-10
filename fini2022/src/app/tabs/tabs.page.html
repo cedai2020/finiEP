@@ -1,0 +1,19 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="goBack()">
+      <img src="../assets/iconos/arrow-back-blanco.png" style="max-width: 20%;">
+      <!-- <ion-label>Tab 1</ion-label> -->
+    </ion-tab-button>
+
+    <ion-tab-button>
+      <ion-label class="barra-inferior">{{ this.global.titulo }}</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="goHome()">
+      <img src="../assets/iconos/home-blanco.png" style="max-width: 20%;">
+      <!-- <ion-label>Tab 3</ion-label> -->
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid style="padding: 0; align-items:center;">
+      <ion-row>
+        <ion-col size="12" class="verde ion-text-center" style="height: auto;">
+          <div class="textoVerdeRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+        <ion-col size="12" class="gris ion-text-center" style="height: auto;">
+          <div class="textoBlancoRegular">{{this.global.textoBarraSuperior}}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondo-contenido">
+
+  <ion-grid class="noMargin">
+    <ion-row>
+      <ion-col class="noMargin" size="12" size-sm="12"  size-md="6" offset-md="3">
+        <div>
+          <img src="{{this.bandera}}" class="imagenBandera">
+        </div>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row style="padding-top:5%;">
+      <ion-col size="10" size-sm="10" size-md="10" offset-xs="1"  offset-sm="1" offset-md="1">
+        <h4 class="textoAzulBold">
+          {{ this.nombre }}
+        </h4>
+        <h6 class="textoGrisRegular">
+          País Invitado de Honor
+        </h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row style="padding-top:3%;">
+      <ion-col size="10" size-sm="10"  size-md="10" offset-xs="1"  offset-sm="1" offset-md="1">
+        <p class="textoGrisRegular ion-text-justify">
+          {{ this.semblanza }}
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-grid class="noMargin" style="padding-bottom: 5%;">
+    <ion-row>
+      <!-- <ion-col class="noMargin" style="padding-top:5%;" size="12" size-sm="12"  size-md="3" offset-xs="0"  offset-sm="0" offset-md="2"> -->
+      <ion-col *ngFor="let imagen of imagenesPais;" class="noMargin" style="padding-top:5%;" size="12" size-sm="12"  size-md="6" offset-md="3">
+        <img src="{{this.url}}{{imagen.nombre_imagen}}" class="imagen" (click)="openPreview(imagen.nombre_imagen)">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>
+

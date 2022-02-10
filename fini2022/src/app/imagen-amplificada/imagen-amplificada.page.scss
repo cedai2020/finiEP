@@ -1,0 +1,23 @@
+.close-fake{
+    --background: transparent;
+    ion-icon{
+        font-size: 2rem;
+    }
+    margin-top: 40px;
+}
+
+ion-content{
+    --background: rgba(44, 39, 44, 0.651);
+    //--background: transparent;
+}
+
+.centrar{
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+

@@ -1,0 +1,19 @@
+.padding{
+    //padding-left: 5%;
+}
+
+.padding-grid{
+    padding: 0px;
+}
+
+ion-toolbar{
+    --border-width: 0px;
+    --padding-start: 0px;
+    --padding-bottom: 0px;
+    --padding-end: 0px;
+    --padding-top: 0px;
+
+    max-height: 30%;
+    width: 100%;
+    height: 30%;
+}
